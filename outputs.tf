@@ -9,5 +9,5 @@ output "password" {
 }
 # BIG-IP admin
 output "adminUsername" {
-  value     = var.adminUsername
+  value     = var.adminAccountName
 }
