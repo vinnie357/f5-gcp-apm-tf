@@ -4,6 +4,6 @@ output "bigip_mgmt_ips" {
 }
 # BIG-IP Password
 output "password" {
-  value     = random_password.password
+  value     = random_password.password.result
   sensitive = false
 }
