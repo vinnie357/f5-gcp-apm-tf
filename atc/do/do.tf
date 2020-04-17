@@ -1,5 +1,5 @@
 provider "bigip" {
-  address = var.bigip_mgmt_ips.value
+  address = "https://${var.mgmt_public_ip_01}"
   username = var.adminUsername.value
   password = var.password.value
 }
