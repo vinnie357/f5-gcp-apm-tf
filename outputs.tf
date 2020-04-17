@@ -11,3 +11,11 @@ output "password" {
 output "adminUsername" {
   value     = var.adminAccountName
 }
+# bigip1 mgmt public ip
+output "mgmt_public_ip_01" {
+    value = module.bigip.mgmt_public_ip_01
+}
+# bigip2 mgmt public ip
+output "mgmt_public_ip_02" {
+    value = module.bigip.mgmt_public_ip_02
+}
