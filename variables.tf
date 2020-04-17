@@ -22,7 +22,9 @@ variable "serviceAccounts" {
 variable "adminSrcAddr" {
     description = "admin mgmt source address in cidr"
 }
-
+variable "adminAccountName" {
+    description = "admin account name for big-ip"
+}
 # project
 variable "gceSshPubKey" {
   description = "GCP GCE Key name for SSH access"

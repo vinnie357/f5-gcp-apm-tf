@@ -4,3 +4,5 @@ adminSrcAddr="192.168.100.100/32"
 adminAccountName="zadmin"
 # public key for instance ssh access
 gceSshPubKey="ssh-rsa AAAA....=="
+# gcp project to deploy in
+GCP_PROJECT_ID="my-project-id"
