@@ -1,7 +1,7 @@
 provider "bigip" {
-  address = "${var.url}"
-  username = "${var.adminAccountName}"
-  password = "${random_password.password.result}"
+  address = "${var.bigip_mgmt_ips.value}"
+  username = "${var.adminUsername}"
+  password = "${var.password.value}"
 }
 
 #Declarative Onboarding template 01

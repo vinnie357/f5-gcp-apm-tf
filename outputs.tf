@@ -7,3 +7,7 @@ output "password" {
   value     = random_password.password.result
   sensitive = false
 }
+# BIG-IP admin
+output "adminUsername" {
+  value     = var.adminUsername
+}
