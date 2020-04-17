@@ -11,3 +11,4 @@ variable "bigipLicense1" {
 variable adminUsername {}
 variable bigip_mgmt_ips {}
 variable password {}
+variable mgmt_ip {}
