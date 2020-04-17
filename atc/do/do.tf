@@ -19,4 +19,5 @@ data "template_file" "vm01_do_json" {
 
 resource "bigip_do"  "do-apm" {
      do_json = data.template_file.vm01_do_json.rendered
+     tenant_name = "apm"
  }

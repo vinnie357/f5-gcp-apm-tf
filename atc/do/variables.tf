@@ -7,3 +7,7 @@ variable "bigipLicense1" {
   description = " bigip license for BYOL"
   default = ""
 }
+# from apm
+variable adminUsername {}
+variable bigip_mgmt_ips {}
+variable password {}
