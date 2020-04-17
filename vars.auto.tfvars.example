@@ -1,0 +1,6 @@
+# admin source address
+adminSrcAddr="192.168.100.100/32"
+# admin account name
+adminAccountName="zadmin"
+# public key for instance ssh access
+gceSshPubKey="ssh-rsa AAAA....=="
