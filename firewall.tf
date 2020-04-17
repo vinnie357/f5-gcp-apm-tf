@@ -62,9 +62,8 @@ resource "google_compute_firewall" "default-allow-internal-int" {
   source_ranges = ["10.0.20.0/24"]
 }
 resource "google_compute_firewall" "mgmt" {
-  name    = "${var.projectPrefix}mgmt-vpn${var.buildSuffix}"
-  network = "${var.mgmt_vpc.name}"
-
+  name    = "${var.projectPrefix}mgmt${random_pet.buildSuffix.id}"
+  network = "${google_compute_network.vpc_network_mgmt.name}"
   allow {
     protocol = "icmp"
   }
@@ -77,8 +76,8 @@ resource "google_compute_firewall" "mgmt" {
   source_ranges = ["${var.adminSrcAddr}"]
 }
 resource "google_compute_firewall" "app" {
-  name    = "${var.projectPrefix}app-vpn${var.buildSuffix}"
-  network = "${var.ext_vpc.name}"
+  name    = "${var.projectPrefix}app-vpn${random_pet.buildSuffix.id}"
+  network = "${google_compute_network.vpc_network_ext.name}"
 
   allow {
     protocol = "icmp"
