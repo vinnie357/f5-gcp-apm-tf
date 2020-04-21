@@ -48,9 +48,6 @@
                     "translateServerAddress": true,
                     "translateServerPort": true,
                     "class": "Service_TCP",
-                    "profileDOS": {
-                        "bigip": "/Common/dos"
-                    },
                     "profileTCP": {
                         "bigip": "/Common/f5-tcp-progressive"
                     },
