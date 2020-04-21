@@ -38,20 +38,12 @@
                 },
                 "gcp_response": {
                     "class": "iRule",
-                    "iRule": "when CLIENT_ACCEPTED {  set virtualSsl \"/DEV/appName/serviceMain\"\n set virtualHttp \"/DEV/appName/serviceMain-Redirect-\"\n \n switch [TCP::local_port] {\n 443 { \n virtual $virtualSsl \n }\n 80 {\n virtual $virtualHttp \n }\n default { \n virtual $virtualSsl \n }\n }\n }"
+                    "iRule": "when CLIENT_ACCEPTED {  set virtualSsl \"/DEV/appName/https\"\n set virtualHttp \"/DEV/appName/https-Redirect-\"\n \n switch [TCP::local_port] {\n 443 { \n virtual $virtualSsl \n }\n 80 {\n virtual $virtualHttp \n }\n default { \n virtual $virtualSsl \n }\n }\n }"
                 },
                 "gcp_local": {
                     "layer4": "tcp",
                     "iRules": [
                         "gcp_response"
-                    ],
-                    "securityLogProfiles": [
-                        {
-                            "bigip": "/Common/Log all requests"
-                        },
-                        {
-                            "bigip": "/Common/local-dos"
-                        }
                     ],
                     "translateServerAddress": true,
                     "translateServerPort": true,
