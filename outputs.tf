@@ -19,3 +19,11 @@ output "mgmt_public_ip_01" {
 output "mgmt_public_ip_02" {
     value = module.bigip.mgmt_public_ip_02
 }
+
+output "instance01Info" {
+    value = module.bigip.instance01Info
+}
+
+output "instance02Info" {
+    value = module.bigip.instance02Info
+}
