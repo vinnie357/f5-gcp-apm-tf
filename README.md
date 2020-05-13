@@ -19,3 +19,10 @@ terraform apply --auto-approve
 ```bash
 terraform destroy --auto-approve
 ```
+
+### optional variables for Terraform Cloud
+
+**no new line characters!! in env vars**
+https://github.com/hashicorp/terraform/issues/22796
+
+GOOGLE_CREDENTIALS="mycredsjson"
