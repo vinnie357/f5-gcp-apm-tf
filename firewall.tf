@@ -73,7 +73,7 @@ resource "google_compute_firewall" "mgmt" {
     ports    = [ "22", "443" ]
   }
 
-  source_ranges = [var.adminSrcAddr]
+  source_ranges = var.adminSrcAddr
 }
 resource "google_compute_firewall" "app" {
   name    = "${var.projectPrefix}app-vpn${random_pet.buildSuffix.id}"
@@ -88,5 +88,5 @@ resource "google_compute_firewall" "app" {
     ports    = [ "80", "443" ]
   }
 
-  source_ranges = [var.adminSrcAddr]
+  source_ranges = var.adminSrcAddr
 }
